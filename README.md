@@ -98,7 +98,7 @@ Aquest manual explica pas a pas com instal·lar, configurar i utilitzar **Bitwar
 2. Descarrega l'instal·lador per a **Windows**.
 3. Executa el fitxer descarregat (`Bitwarden-Installer.exe`) i segueix els passos de l'assistent d'instal·lació per defecte.
 
-![Instal·lació de Bitwarden a Windows 11](captures/01_instal lacio.png)
+![alt text](<Captura de pantalla 2026-11-06 181328.png>)
 
 ### 1.2 Creació del compte i Contrasenya Mestra
 1. Un cop instal·lat, obre l'aplicació de Bitwarden i fes clic a **Crear compte** (*Create Account*).
@@ -107,7 +107,7 @@ Aquest manual explica pas a pas com instal·lar, configurar i utilitzar **Bitwar
    > ⚠️ **Important:** Aquesta contrasenya és l'única clau que desxifra totes les altres. Ha de ser llarga (mínim 14-16 caràcters), combinant majúscules, minúscules, números i símbols. Si la perds, no es podrà recuperar el compte.
 4. (Opcional) Afegeix una pista per a la contrasenya i fes clic a **Crear compte**.
 
-![Creació del compte mestre a Bitwarden](captures/02_creacio_compte.png)
+![alt text](<Captura de pantalla 2026-11-06 181513.png>)
 
 ---
 
@@ -122,7 +122,7 @@ Per evitar crear contrasenyes febles, utilitzarem el generador automàtic integr
    * **Opcions actives:** Majúscules (`A-Z`), Minúscules (`a-z`), Números (`0-9`) i Símbols (`!@#$%^&*`).
 3. Fes clic a **Generar contrasenya** o a la icona de copiar per fer servir la clau aleatòria creada.
 
-![Configuració del generador de contrasenyes](captures/03_generador.png)
+![alt text](<Captura de pantalla 2026-11-06 182000.png>)
 
 ---
 
@@ -137,7 +137,7 @@ Per evitar crear contrasenyes febles, utilitzarem el generador automàtic integr
    * **URI / Web:** `https://mail.google.com` (o la URL del webmail).
 3. Fes clic a **Desar** (*Save*).
 
-![Desar credencial de correu electrònic](captures/04_desar_correu.png)
+![alt text](<Captura de pantalla 2026-11-06 183533.png>)
 
 ### 3.2 Desar una credencial d'una aplicació o servei web
 1. Prem de nou el botó **+ (Afegir element)**.
@@ -148,16 +148,7 @@ Per evitar crear contrasenyes febles, utilitzarem el generador automàtic integr
    * **URI 1:** `https://panell.empresa.local`.
 3. Fes clic a **Desar**.
 
-![Desar credencial d'un servei web](captures/05_desar_servei_web.png)
-
-### 3.3 Ús de l'extensió del navegador per a l'emplenament automàtic
-1. Descarrega i instal·la l'extensió de **Bitwarden** per al teu navegador (Chrome, Edge o Firefox).
-2. Inicia sessió a l'extensió amb el teu compte mestre.
-3. Quan entris a la pàgina d'inici de sessió d'un servei desat (ex. el correu o el panell web):
-   * L'extensió detectarà la URL i mostrarà un avís amb el nombre de credencials disponibles.
-   * Fes clic a l'extensió i selecciona el compte, o utilitza la drecera de teclat **`Ctrl + Shift + L`** per emplenar automàticament l'usuari i la contrasenya.
-
-![Emplenament automàtic amb l'extensió de navegador](captures/06_autofill_navegador.png)
+![alt text](<Captura de pantalla 2026-11-06 183753.png>)
 
 ---
 
@@ -172,7 +163,7 @@ Per evitar crear contrasenyes febles, utilitzarem el generador automàtic integr
    * **CSV / JSON plà:** No recomanat, ja que deixa les contrasenyes en text pla sense xifrar.
 3. Introdueix la teva Contrasenya Mestra per confirmar la descàrrega del fitxer.
 
-![Exportació del repositori de Bitwarden](captures/07_exportar_backup.png)
+![alt text](<Captura de pantalla 2026-11-06 184026.png>)
 
 ### 4.2 Bona pràctica per emmagatzemar la còpia de seguretat
 Per garantir la seguretat del backup descarregat:
