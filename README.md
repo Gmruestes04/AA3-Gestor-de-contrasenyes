@@ -84,3 +84,99 @@ Com a conclusió de l'informe tècnic, es recomana la implementació de **Bitwar
 1. **Dinamisme de l'Equip Tècnic:** L'equip de sistemes i xarxes opera habitualment des de diferents entorns (servidors, portàtils de treball, dispositius mòbils i entorns web). La sincronització automàtica i multi-dispositiu de Bitwarden garanteix l'accés immediat a les credencials sense interrompre el flux de treball.
 2. **Seguretat Garantida (Zero-Knowledge):** Tot i ser una solució al núvol, la seva arquitectura assegura que només el personal autoritzat amb la contrasenya mestra pugui desxifrar la informació, mantenint un nivell de seguretat equivalent al model offline.
 3. **Gestió d'Equips i Col·laboració:** Bitwarden permet crear orgs corporatives i compartir credencials de servidors o serveis comuns entre tècnics de forma segura i auditable, evitant l'enviament de claus per canals insegurs com xats o correus electrònics.
+
+# Fase 2: Guia d'Ús Tècnica (Manual Operatiu - Bitwarden)
+
+Aquest manual explica pas a pas com instal·lar, configurar i utilitzar **Bitwarden** com a gestor de contrasenyes corporatiu per a l'equip tècnic.
+
+---
+
+## 1. Instal·lació i Configuració Inicial
+
+### 1.1 Descàrrega i instal·lació de l'aplicació d'escriptori
+1. Obre el navegador a la màquina virtual (Windows 11) i entra a la pàgina oficial: `https://bitwarden.com/download/`.
+2. Descarrega l'instal·lador per a **Windows**.
+3. Executa el fitxer descarregat (`Bitwarden-Installer.exe`) i segueix els passos de l'assistent d'instal·lació per defecte.
+
+![Instal·lació de Bitwarden a Windows 11](captures/01_instal lacio.png)
+
+### 1.2 Creació del compte i Contrasenya Mestra
+1. Un cop instal·lat, obre l'aplicació de Bitwarden i fes clic a **Crear compte** (*Create Account*).
+2. Introdueix el teu correu electrònic corporatiu.
+3. Defineix la teva **Contrasenya Mestra** (*Master Password*). 
+   > ⚠️ **Important:** Aquesta contrasenya és l'única clau que desxifra totes les altres. Ha de ser llarga (mínim 14-16 caràcters), combinant majúscules, minúscules, números i símbols. Si la perds, no es podrà recuperar el compte.
+4. (Opcional) Afegeix una pista per a la contrasenya i fes clic a **Crear compte**.
+
+![Creació del compte mestre a Bitwarden](captures/02_creacio_compte.png)
+
+---
+
+## 2. Generació de Contrasenyes Segures
+
+Per evitar crear contrasenyes febles, utilitzarem el generador automàtic integrat a Bitwarden:
+
+1. Dins de l'aplicació o l'extensió, fes clic a la icona de **Generador** (*Generator*).
+2. Configura els paràmetres recomanats per a l'empresa:
+   * **Tipus:** Contrasenya (*Password*).
+   * **Longitud:** Mínim 16 caràcters.
+   * **Opcions actives:** Majúscules (`A-Z`), Minúscules (`a-z`), Números (`0-9`) i Símbols (`!@#$%^&*`).
+3. Fes clic a **Generar contrasenya** o a la icona de copiar per fer servir la clau aleatòria creada.
+
+![Configuració del generador de contrasenyes](captures/03_generador.png)
+
+---
+
+## 3. Exemples d'Ús i Emplenament Automàtic
+
+### 3.1 Desar una credencial de correu electrònic
+1. Vegues a l'apartat **El meu repositori** (*Vault*) i fes clic al botó **+ (Afegir element)**.
+2. Emplena els camps bàsics:
+   * **Nom:** Correu Corporatiu / Gmail Enterprise.
+   * **Nom d'usuari:** `usuari@empresa.com`.
+   * **Contrasenya:** Utilitza el generador integrat per posar una clau segura.
+   * **URI / Web:** `https://mail.google.com` (o la URL del webmail).
+3. Fes clic a **Desar** (*Save*).
+
+![Desar credencial de correu electrònic](captures/04_desar_correu.png)
+
+### 3.2 Desar una credencial d'una aplicació o servei web
+1. Prem de nou el botó **+ (Afegir element)**.
+2. Completa les dades del servei intern o extern (per exemple, panell d'administració o un servei Cloud):
+   * **Nom:** Panell Servidor Web / Nextcloud.
+   * **Nom d'usuari:** `admin_tecnic`.
+   * **Contrasenya:** Clau generada de 16+ caràcters.
+   * **URI 1:** `https://panell.empresa.local`.
+3. Fes clic a **Desar**.
+
+![Desar credencial d'un servei web](captures/05_desar_servei_web.png)
+
+### 3.3 Ús de l'extensió del navegador per a l'emplenament automàtic
+1. Descarrega i instal·la l'extensió de **Bitwarden** per al teu navegador (Chrome, Edge o Firefox).
+2. Inicia sessió a l'extensió amb el teu compte mestre.
+3. Quan entris a la pàgina d'inici de sessió d'un servei desat (ex. el correu o el panell web):
+   * L'extensió detectarà la URL i mostrarà un avís amb el nombre de credencials disponibles.
+   * Fes clic a l'extensió i selecciona el compte, o utilitza la drecera de teclat **`Ctrl + Shift + L`** per emplenar automàticament l'usuari i la contrasenya.
+
+![Emplenament automàtic amb l'extensió de navegador](captures/06_autofill_navegador.png)
+
+---
+
+## 4. Gestió de Còpies de Seguretat (Backup)
+
+### 4.1 Exportació de la base de dades de contrasenyes
+És fonamental tenir una còpia de seguretat de les dades en cas d'emergència:
+
+1. Dins de l'aplicació de Bitwarden, ves a **Ajustos** (*Settings*) > **Exportar repositori** (*Export Vault*).
+2. Selecciona el format d'exportació:
+   * **JSON xifrat (*Encrypted JSON*):** **Recomanat**. Manté el xifratge de les teves dades protegit amb la teva clau de compte o una contrasenya personalitzada.
+   * **CSV / JSON plà:** No recomanat, ja que deixa les contrasenyes en text pla sense xifrar.
+3. Introdueix la teva Contrasenya Mestra per confirmar la descàrrega del fitxer.
+
+![Exportació del repositori de Bitwarden](captures/07_exportar_backup.png)
+
+### 4.2 Bona pràctica per emmagatzemar la còpia de seguretat
+Per garantir la seguretat del backup descarregat:
+
+* **Unitat USB xifrada:** Copia el fitxer d'exportació en un llapis USB xifrat amb **BitLocker** (en Windows) o **LUKS** (en Linux).
+* **Emmagatzematge al núvol segur:** Si es desa al núvol, s'ha d'assegurar que el fitxer exportat estigui prèviament xifrat (amb el format JSON xifrat de Bitwarden o utilitzant eines com **VeraCrypt** o 7-Zip amb contrasenya AES-256).
+* **Guardat físic:** Guarda el llapis USB en una caixa forta o armari tancat amb clau a l'oficina.
